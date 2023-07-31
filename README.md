@@ -1,5 +1,5 @@
 # IIITB_Asic
-<Details></Day1>
+<Day1></Day1>
   
 # Software Installation
 # Yosys
