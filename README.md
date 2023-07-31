@@ -1,7 +1,6 @@
 # IIITB_Asic
-<Day1>
+<Details></Day1>
   
-# Day 1
 # Software Installation
 # Yosys
 **Steps to install Yosys**
