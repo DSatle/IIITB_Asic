@@ -1,11 +1,10 @@
 # IIITB_Asic
 # Day1
-<details>
-  <summary></Day1>
-</details>
+
 # Software Installation
 # Yosys
 **Steps to install Yosys**
+
 ![Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/5aa618d6-63f5-433d-abd4-949d61e06621)
 # Verilog  
 **Steps to install Verilog**<br>
