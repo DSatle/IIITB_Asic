@@ -1,6 +1,6 @@
 # IIITB_Asic
-<Day1></Day1>
-  
+<details>
+<Day1>
 # Software Installation
 # Yosys
 **Steps to install Yosys**
@@ -11,6 +11,7 @@
 # GTKWave
 **Steps to install GTKWave**
 ![Gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/4d457906-7133-4a3a-ab59-436683b3a1e7)
+</details>
 
 
 
