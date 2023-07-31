@@ -1,13 +1,18 @@
 # IIITB_Asic
-# Week 1
+<details>
+  <Day1></Day1>
+# Day 1
 # Software Installation
 # Yosys
 **Steps to install Yosys**
-![Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/fdff3826-b36f-4cdd-a71b-dce2bf2ab0c1)
+
+![Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/5aa618d6-63f5-433d-abd4-949d61e06621)
 **Steps to install Verilog**
-![Verilog](https://github.com/DSatle/IIITB_Asic/assets/140998466/91386ca8-fc7d-4d24-b63b-b22c4621ace2)
+![Verilog](https://github.com/DSatle/IIITB_Asic/assets/140998466/f89e230b-0cd2-4994-9d6c-18daabe59356)
+
 **Steps to install GTKWave**
-![GTKWave](https://github.com/DSatle/IIITB_Asic/assets/140998466/49d1f584-84c9-424b-a3dd-8f901b9fab70)
+![Gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/4d457906-7133-4a3a-ab59-436683b3a1e7)
+
 
 
 
