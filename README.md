@@ -108,7 +108,7 @@ sudo docker run hello-world
 ### Knowing Magic
 Magic is an electronic design automation (EDA) layout tool for very-large-scale integration (VLSI) integrated circuit (IC) originally written by John Ousterhout and his graduate students at UC Berkeley. Work began on the project in February 1983. The main difference between Magic and other VLSI design tools is its use of "corner-stitched" geometry, in which all layout is represented as a stack of planes, and each plane consists entirely of "tiles" (rectangles). Magic is primarily famous for writing the scripting interpreter language Tcl.
 
-***Steps to install magic***
+**Steps to install magic**
 ```
 sudo apt-get install m4
 sudo apt-get install tcsh
@@ -124,6 +124,25 @@ cd magic
 make
 sudo make install
 ```
+### Knowing OpenSTA
+OpenSTA is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats such as Verilog netlist, Liberty library, SDC timing constraints, SDF delay annotation and SPEF parasitics. OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
+
+**Steps to install OpenSTA**
+Prior to the installation of the OpenSTA install the dependencies using the command shown below :
+```
+sudo apt-get install cmake clang gcc tcl swig bison flex
+```
+After installing the dependencies use the following command to install OpenSTA:
+```
+git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
+cd OpenSTA
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+```
+
 
 
 
