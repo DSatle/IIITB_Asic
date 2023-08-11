@@ -1,6 +1,6 @@
 # IIITB_Asic
 This github repository maps the progress made in the ASIC design class under the guidance of Kunal Ghosh(Founder & CEO Inscopix,Inc).
-Repository will also act as refernce to aspirants who desire to work in semiconductor industry, all the tools used here are open source and all the necessary instructions are provided wherever its needed.
+Repository will also act as a reference to aspirants who aspire to work in semiconductor industry, all the tools used here are open source and all the necessary instructions are provided wherever its needed.
 # Day0
 
 ## Software Installation
