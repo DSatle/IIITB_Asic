@@ -5,8 +5,7 @@ ASIC stands for Application Specific Integrated Chips, as name suggests these ch
 # Day_0_Software_Installation
 Before moving towards the first step of learning the fundamental concepts ASIC design. This section deals with the installation of necessary tools required for the ASIC design.
 ## Software Installation
-### Yosys
-**Steps to install Yosys**
+### Knowing Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Selected features and typical applications:
 
 Process almost any synthesizable Verilog-2005 design
@@ -16,6 +15,7 @@ Mapping to ASIC standard cell libraries (in Liberty File Format)
 Mapping to Xilinx 7-Series and Lattice iCE40 and ECP5 FPGAs
 Foundation and/or front-end for custom flows
 Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the Yosys C++ code base. Yosys also serves as backend for several tools that use formal methods to reason about designs, such as sby for SMT-solver-based formal property checking or mcy for evaluating the quality of testbenches with mutation coverage metrics. Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD license).
+**Steps to Install Yosys**
 ```
 $ git clone https://github.com/YosysHQ/yosys.git
 $ cd yosys-master 
@@ -28,17 +28,21 @@ $ make
 $ sudo make install
 ```
 ![Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/5aa618d6-63f5-433d-abd4-949d61e06621)
-### Verilog  
-
+### Knowing Verilog  
+ICARUS VERILOG
+Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format (EDIF). It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.Icarus Verilog is released under the GNU General Public License, Icarus Verilog is free software. Icarus is composed of a Verilog compiler (including a Verilog preprocessor) with support for plug-in backends, and a virtual machine that simulates the design.
 **Steps to install Verilog**<br>
 ```
 sudo apt-get install iverilog
 ```
 ![Verilog](https://github.com/DSatle/IIITB_Asic/assets/140998466/f89e230b-0cd2-4994-9d6c-18daabe59356)
-### GTKWave
+### Knowing GTKWave
+GTKWave is a fully featured GTK+ based wave viewer for Unix and Win32 which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.
 **Steps to install GTKWave**<br>
+```
 sudo apt update<br>
 sudo apt install gtkwave
+```
 ![Gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/4d457906-7133-4a3a-ab59-436683b3a1e7)
 
 
