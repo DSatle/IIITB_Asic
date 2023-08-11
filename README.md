@@ -48,6 +48,27 @@ sudo apt install gtkwave
 ```
 ![Gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/4d457906-7133-4a3a-ab59-436683b3a1e7)
 
+### Knowing NGSPICE
+ngspice is the open source spice simulator for electric and electronic circuits comprising of JFETs, bipolar and MOS transistors, passive elements like R, L, or C, diodes, transmission lines and other devices, all interconnected in a netlist. Digital circuits are simulated as well, event driven and fast, from single gates to complex circuits. And you may enter the combination of both analog and digital as a mixed-signal circuit. ngspice offers a wealth of device models for active, passive, analog, and digital elements. Model parameters are provided by our collections, by the semiconductor device manufacturers, or from semiconductor foundries. The user can add their circuits as a netlist, and the output is one or more graphs of currents, voltages and other electrical quantities or is saved in a data file.
+
+**Steps to install ngspice**
+Download the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and then follow the commands given below :
+```
+# Dependency for ngspice:
+sudo apt-get install build-essential
+sudo apt-get install libxaw7-dev
+
+# ngspice installation:
+tar -zxvf ngspice-40.tar.gz
+cd ngspice-40
+mkdir release
+cd release
+../configure  --with-x --with-readline=yes --disable-debug
+make
+sudo make install
+```
+
+
 
 
 
