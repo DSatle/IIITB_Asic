@@ -32,6 +32,7 @@ $ sudo make install
 ### Knowing Verilog  
 ICARUS VERILOG
 Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format (EDIF). It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.Icarus Verilog is released under the GNU General Public License, Icarus Verilog is free software. Icarus is composed of a Verilog compiler (including a Verilog preprocessor) with support for plug-in backends, and a virtual machine that simulates the design.
+
 **Steps to install Verilog**<br>
 ```
 sudo apt-get install iverilog
@@ -39,6 +40,7 @@ sudo apt-get install iverilog
 ![Verilog](https://github.com/DSatle/IIITB_Asic/assets/140998466/f89e230b-0cd2-4994-9d6c-18daabe59356)
 ### Knowing GTKWave
 GTKWave is a fully featured GTK+ based wave viewer for Unix and Win32 which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.
+
 **Steps to install GTKWave**<br>
 ```
 sudo apt update<br>
