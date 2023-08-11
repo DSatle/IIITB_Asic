@@ -2,7 +2,7 @@
 This github repository maps the progress made in the ASIC design class under the guidance of Kunal Ghosh(Founder & CEO Inscopix,Inc). The repository progress as the project proceeds and utilizes the specific tool wherever its needed. Repository will also act as a reference to aspirants who aspire to work in semiconductor industry, all the tools used here are open source and all the necessary instructions are provided wherever its needed.
 # Knowing the ASIC
 ASIC stands for Application Specific Integrated Chips, as name suggests these chips are hard coded i.e. made for specific purpose and user can't change its functionality/program as incase of FPGA or Gate Array. These chips are are highly optimised when it comes to the three main aspects of a silicon chip i.e. small area, low power consumption & high performance. But all this comes at a cost hence ASIC chips are costly and using this is only viable when chips are manufactured in large number.
-
+# Table of Contents
 [Day 0](#day-0)
 
 [Day 1](#day-1)
@@ -78,6 +78,8 @@ sudo make install
 ### Knowing Openlane
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, KLayout and a number of custom scripts for design exploration and optimization. It also provides a number of custom scripts for design exploration and optimization. The flow performs all ASIC implementation steps from RTL all the way down to GDSII. Currently, it supports both A and B variants of the sky130 PDK, the C variant of the gf180mcu PDK, and instructions to add support for other (including proprietary) PDKs are documented. OpenLane abstracts the underlying open source utilities, and allows users to configure all their behavior with just a single configuration file.
 
+**Steps to install Openlane**
+
 Prior to the installation of the OpenLane install the dependencies and packages using the command shown below :
 ```
 sudo apt-get update
@@ -103,6 +105,8 @@ sudo reboot
 # Check for installation
 sudo docker run hello-world
 ```
+### Knowing Magic
+
 
 
 
