@@ -157,7 +157,21 @@ Testbench is the setup to apply stimulus(test_vectors) to the design to check it
 ### Verilog based simulation flow
 ![Whole Process](https://github.com/DSatle/IIITB_Asic/assets/140998466/a8fd9846-658b-4893-b339-3daf3577d8d8)
 
-
+## Github Cloning
+### Steps to clone the github repository
+First I made a new directory in VSD and VLSI, follow commands were used
+```
+mkdir VSD
+cd VSD
+mkdir VLSI
+```
+In VLSI directory I clonned the following github repository
+https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+Following commands were used to clone the github repository
+```
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+````
+Accessing the files 
 
 
 
