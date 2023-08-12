@@ -10,6 +10,12 @@ ASIC stands for Application Specific Integrated Chips, as name suggests these ch
 
 [Day 2](#day-2)
 
+[Day 3](#day-3)
+
+[Day 4](#day-4)
+
+[Day 5](#day-5)
+
 # Day_0_Software_Installation
 Before moving towards the first step of learning the fundamental concepts ASIC design. This section deals with the installation of necessary tools required for the ASIC design.
 ## Software Installation
@@ -248,6 +254,7 @@ The above code opens the verilog code for test bench of 2x1 MUX writen in behavi
 Synthesis is the process that converts RTL into a technology-specific gate-level netlist, optimized for a set of pre-defined constraints.Synthesizer is a tool used to convert the RTL from the netlist. Yosys is one such open source synthesizer. A netlist is a file that represents the gates and flip-flops required to implement the design in hardware and the ineterconnections between them which is a result of the synthesis process. Yosys is provided with both the design and its corresponding .lib file, and its task is to generate the netlist. The netlist generated is a depiction of the input design provided to Yosys, contructed using the standard cells available in the .lib file. To validate the synthesis output, the netlist is verified in a manner analogous to how the RTL design is verified. This involves using the same testbench and stimulus set to confirm that the outcomes obtained from the netlist correspond to those acquired when using the RTL design. The block diagram representation of the yosys flow and the netlist verification is shown below:
 
 ![netlist_verification](https://github.com/DSatle/IIITB_Asic/assets/140998466/22092240-21c2-4d7e-8812-a90b98c37953)
+
 
 
 
