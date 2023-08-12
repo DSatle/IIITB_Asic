@@ -148,7 +148,6 @@ sudo make install
 ### Simulator
 A simulator is a software tool that can be used to check the functionality of a circuit design before it is implemented in hardware. It does this by simulating the behavior of the design in software, using a Hardware Description Language (HDL) such as Verilog or VHDL. RTL design is checked for adherence to the specifications by simulating the design. Simultor looks for the chnages on the input signals. Output of the simulator is a vcd file i.e. value change dump format.
 
-![Simulator](https://github.com/DSatle/IIITB_Asic/assets/140998466/58bebb58-8965-4421-ace3-c560f64b74f8)
 
 ### Design
 Design is the actual verilog code or set of verilog codes which has the intended functionality to meeet with the required specifications. Design can be of different types like Behavioral, Structural, Data flow model. Here I have started with the behavioral design of a MUX.
@@ -189,6 +188,8 @@ cd sky130RTLDesignAndSynthesisWorkshop
 cd verilog_files
 ```
 ![verilog files](https://github.com/DSatle/IIITB_Asic/assets/140998466/529fb477-4d1f-4aa6-89bf-4495946f29d7)
+
+
 
 
 
