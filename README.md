@@ -199,6 +199,7 @@ cd verilog_files
 The verilog_model folder in \\wsl.localhost\Ubuntu\home\vsd\VLSI\sky130RTLDesignAndSynthesisWorkshop\my_lib. The verilog_files folder contains all the lab experiment verilog source files and corresponding testbench files needed to simulate the designs.
 
 **Demostration of the Icarus Verilog and GTKWave**
+
 To run the iverilog command the unbuntu should be in the same directory where verilog log files are presesnt this is done using the following commands
 ```
 /home/vsd/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
@@ -221,6 +222,7 @@ gtkwave tb_good_mux.vcd
 ![Screenshot (7)](https://github.com/DSatle/IIITB_Asic/assets/140998466/22053a27-982f-4fb0-9b55-b29b9347fe43)
 
 **Descrpition of Verilog Code**
+
 The verilog code can be viewed using the following commands
 ```
 gedit good_mux.v
@@ -237,20 +239,25 @@ The above code opens the verilog code for test bench of 2x1 MUX writen in behavi
 ![MUX test bench](https://github.com/DSatle/IIITB_Asic/assets/140998466/3606496c-9185-41d2-86ad-cd2dd0666183)
 
 **Process of Synthesis i.e RTL(Verilog code to Netlist)**
-**Terminologies**
-Synthesis- Synthesis is the process that converts RTL into a technology-specific gate-level netlist, optimized for a set of pre-defined constraints.
 
-Netlist- Netlist is the schematic or circuit equivalent of the RTL code. Netlist can be of various type based on its representation. A netlist can have elements like MUX, multiplier, adder, etc or it can be a gate level netlist where the given RTL code is implemented using gates the netlist shows the interconnection between gates.
+**Terminologies**
+
+**Synthesis**- Synthesis is the process that converts RTL into a technology-specific gate-level netlist, optimized for a set of pre-defined constraints.
+
+**Netlist**- Netlist is the schematic or circuit equivalent of the RTL code. Netlist can be of various type based on its representation. A netlist can have elements like MUX, multiplier, adder, etc or it can be a gate level netlist where the given RTL code is implemented using gates the netlist shows the interconnection between gates.
 Library- Library is the collection of all the standard cells needed to implement the given RTL logic thriugh a circuit. It consists of gates with various configutations 2,3,4 inputs or with different delay times.
 
 **Introduction to the synthesizer**
+
 Synthesizer is a tool used to convert the RTL from the netlist. Yosys is one such open source synthesizer. Yosys is provided with both the design and its corresponding .lib file, and its task is to generate the netlist. The netlist generated is a depiction of the input design provided to Yosys, contructed using the standard cells available in the .lib file. To validate the synthesis output, the netlist is verified in a manner analogous to how the RTL design is verified. This involves using the same testbench and stimulus set to confirm that the outcomes obtained from the netlist correspond to those acquired when using the RTL design. 
 **Generating the netlist**
+
 Here our synthesizer is Yosys, the following image shows the process and three command needed to generate the netlist using yosys
 
 ![Screenshot (12)](https://github.com/DSatle/IIITB_Asic/assets/140998466/1da95471-c269-4197-83fe-b23e0b6346a5)
 
 **Verifying the netlist**
+
 Netlist verification is done to cross check whether the given netlist performs exactly in the same as the RTL design. The image shows the pictorial representation of verifying the netlist using the test bench.
 
 ![netlist_verification](https://github.com/DSatle/IIITB_Asic/assets/140998466/03daf290-81af-4b55-845a-413418911bd5)
