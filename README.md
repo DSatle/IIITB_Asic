@@ -189,6 +189,24 @@ cd verilog_files
 ```
 ![verilog files](https://github.com/DSatle/IIITB_Asic/assets/140998466/529fb477-4d1f-4aa6-89bf-4495946f29d7)
 
+The lib folder contains all the library files needed for the lab, including the sky130 standard cell library. The verilog_model folder in \\wsl.localhost\Ubuntu\home\vsd\VLSI\sky130RTLDesignAndSynthesisWorkshop\my_lib contains the verilog models of the standard cells present in the .lib file. The verilog_files folder contains all the lab experiment verilog source files and corresponding testbench files needed to simulate the designs.
+
+Standard cell library - It is a collection of well defined and appropriately characterized logic gates that can be used to implement a digital design. Timing data of standard cells is provided in the Liberty format.
+
+The lib directory contains the library file sky130_fd_sc_hd__tt_025C_1v80.lib. Libraries in the SKY130 PDK are named using the following scheme:
+<Process_name><Library_Source_Abbreviation><Library_type_abbreviation>[_<Library_name]
+
+sky130 - Process Technology of the PDK sky130
+fd - SkyWater Foundry
+sc - Digital standard cells
+hd - High density
+tt - Typical Timing
+025C - 25 degree celsius Temperature
+1v80 - 1.8V Supply Voltage
+
+**Demostration of the Icarus Verilog and GTKWave**
+
+
 
 
 
