@@ -257,6 +257,11 @@ Here our synthesizer is Yosys, the following image shows the process and three c
 
 ![Screenshot (12)](https://github.com/DSatle/IIITB_Asic/assets/140998466/1da95471-c269-4197-83fe-b23e0b6346a5)
 
+The below picture describes the RTL design along with the netlist corresponding to it.
+
+![Screenshot (16)](https://github.com/DSatle/IIITB_Asic/assets/140998466/ef1e161a-3ab0-4e5b-a885-f03337b3a4ea)
+
+
 **Verifying the netlist**
 
 Netlist verification is done to cross check whether the given netlist performs exactly in the same as the RTL design. The image shows the pictorial representation of verifying the netlist using the test bench.
@@ -264,6 +269,20 @@ Netlist verification is done to cross check whether the given netlist performs e
 ![netlist_verification](https://github.com/DSatle/IIITB_Asic/assets/140998466/03daf290-81af-4b55-845a-413418911bd5)
 
 **Need for slow gates in library**
+
+**Setup Time**- The amount of time the data at the synchronous input must be stable before the active edge of the clock.
+
+**Hold Time**- The amount of time the data at the synchronous input must be stable after the active edge of the clock.
+
+Note- Both setup and hold time for the flipflops is specified in the librbary.
+
+![Setup and hold time](https://github.com/DSatle/IIITB_Asic/assets/140998466/5bd55f3f-5841-4b3b-bc76-5a19c047d900)
+
+The below image explains why we need slower gates. In the image for proper functioning of the circuit data should reach DFFB well before(setup time) the next clock pulse arrives. And DFFB should hold this value for some amount of time (Hold time) so that it can be carry forward the value to next element of the circuit.
+
+![Setup   Hold Time (2)](https://github.com/DSatle/IIITB_Asic/assets/140998466/38a6ba79-82c3-47b4-bdf2-dcfd878912b0)
+
+Hence we need fast cells to meet the required performance and we need cells that work slow to meet HOLD.
 
 
 
