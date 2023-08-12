@@ -250,6 +250,7 @@ Library- Library is the collection of all the standard cells needed to implement
 **Introduction to the synthesizer**
 
 Synthesizer is a tool used to convert the RTL from the netlist. Yosys is one such open source synthesizer. Yosys is provided with both the design and its corresponding .lib file, and its task is to generate the netlist. The netlist generated is a depiction of the input design provided to Yosys, contructed using the standard cells available in the .lib file. To validate the synthesis output, the netlist is verified in a manner analogous to how the RTL design is verified. This involves using the same testbench and stimulus set to confirm that the outcomes obtained from the netlist correspond to those acquired when using the RTL design. 
+
 **Generating the netlist**
 
 Here our synthesizer is Yosys, the following image shows the process and three command needed to generate the netlist using yosys
