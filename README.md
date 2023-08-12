@@ -148,11 +148,15 @@ sudo make install
 ### Simulator
 A simulator is a software tool that can be used to check the functionality of a circuit design before it is implemented in hardware. It does this by simulating the behavior of the design in software, using a Hardware Description Language (HDL) such as Verilog or VHDL. RTL design is checked for adherence to the specifications by simulating the design. Simultor looks for the chnages on the input signals. Output of the simulator is a vcd file i.e. value change dump format.
 
+![Simulator](https://github.com/DSatle/IIITB_Asic/assets/140998466/58bebb58-8965-4421-ace3-c560f64b74f8)
+
 ### Design
 Design is the actual verilog code or set of verilog codes which has the intended functionality to meeet with the required specifications. Design can be of different types like Behavioral, Structural, Data flow model. Here I have started with the behavioral design of a MUX.
 
-#### Test bench
+#### Test Bench
 Testbench is the setup to apply stimulus(test_vectors) to the design to check its functionality. Here I have uploaded the test bench for the for the MUX design.
+
+![Test Bench](https://github.com/DSatle/IIITB_Asic/assets/140998466/3c28d39c-a6b4-400d-95a5-71dfa62fa8d4)
 
 ### Verilog based simulation flow
 ![Whole Process](https://github.com/DSatle/IIITB_Asic/assets/140998466/a8fd9846-658b-4893-b339-3daf3577d8d8)
@@ -168,6 +172,8 @@ mkdir VLSI
 In VLSI directory I clonned the following github repository
 
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+![Kunalg123](https://github.com/DSatle/IIITB_Asic/assets/140998466/bca70601-be94-42e8-8f73-be2c9c3d5a78)
 
 Following commands were used to clone the github repository
 ```
