@@ -1,3 +1,4 @@
+
 # IIITB_Asic_Divyam_Satle
 This github repository maps the progress made in the ASIC design class under the guidance of Kunal Ghosh(Founder & CEO Inscopix,Inc). The repository progress as the project proceeds and utilizes the specific tool wherever its needed. Repository will also act as a reference to aspirants who aspire to work in semiconductor industry, all the tools used here are open source and all the necessary instructions are provided wherever its needed.
 # Knowing the ASIC
@@ -205,6 +206,26 @@ tt - Typical Timing
 1v80 - 1.8V Supply Voltage
 
 **Demostration of the Icarus Verilog and GTKWave**
+To run the iverilog command the unbuntu should be in the same directory where verilog log files are presesnt this is done using the following commands
+```
+/home/vsd/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+```
+Now simulation of RTL design and test bench is done using the following commands
+```
+iverilog good_mux.v tb_good_mux.v 
+```
+![Screenshot (8)](https://github.com/DSatle/IIITB_Asic/assets/140998466/935509e1-6606-42b3-b070-96d48354e835)
+
+The above command will compile and check for the syntax errors in both the design and testbench. Upon compiling successfully it will generate an executable file a.out.
+
+Execute the a.out using the command ./a.out , resulting in the generation of a tb_good_mux.vcd file that captures changes in the input and output values. This vcd file is given as the input to the GTKWave to view the wave form. In GTKWave drag and drop the required input and output signals to view the waveform. Since the simulation is done for long amount of time use the zoom to fit option to view the entire waveform.
+
+Commands to execute to view the waveform :
+```
+gtkwave tb_good_mux.vcd
+```
+
+![Screenshot (7)](https://github.com/DSatle/IIITB_Asic/assets/140998466/22053a27-982f-4fb0-9b55-b29b9347fe43)
 
 
 
