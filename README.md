@@ -156,7 +156,8 @@ Design is the actual verilog code or set of verilog codes which has the intended
 #### Test Bench
 Testbench is the setup to apply stimulus(test_vectors) to the design to check its functionality. Here I have uploaded the test bench for the for the MUX design.
 
-![Test Bench](https://github.com/DSatle/IIITB_Asic/assets/140998466/3c28d39c-a6b4-400d-95a5-71dfa62fa8d4)
+![Test Bench](https://github.com/DSatle/IIITB_Asic/assets/140998466/6b56c270-7f7c-4d9d-b22c-135282fb41e8)
+
 
 ### Verilog based simulation flow
 ![Whole Process](https://github.com/DSatle/IIITB_Asic/assets/140998466/a8fd9846-658b-4893-b339-3daf3577d8d8)
