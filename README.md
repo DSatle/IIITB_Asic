@@ -285,6 +285,51 @@ The below image explains why we need slower gates. In the image for proper funct
 Hence we need fast cells to meet the required performance and we need cells that work slow to meet HOLD.
 
 
+## Day_2 Timing libs, hierarchial vs flat synthesis & efficient flop coding styles
+
+**Introduction to timing.libs**
+
+
+
+
+
+
+
+**Hierarchial vs Flaot synthesis**
+
+
+
+
+
+**Various Flop Coding Styles and optimization**
+
+
+## Day_3 Combinational and sequential optimizations
+
+**Introduction to optimizations**
+
+
+
+
+**Combinational Logic optimizations**
+
+
+**Sequential Logic optimizations**
+
+
+## Day_4 GLS, blocking and non-blocking and Synthesis-Simulation mismatch
+
+**GLS, Synthesis-Simulation mismatch and blocking/nonblocking statements**
+
+**Labs on GLS and Synthesis-Simulation Mismatch**
+
+**Labs on synth-sim mismatch for blocking statement**
+
+## Day_5 If,case, for loop and for generate
+**If Case constructs**
+
+
+
 
 
 
