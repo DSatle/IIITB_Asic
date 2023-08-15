@@ -532,8 +532,15 @@ Sync & Async flipflop code
 
 Add image from phone here
 
+</details>
 
 ## Day_3 Combinational and sequential optimizations
+
+</details>
+
+
+<details>
+ <summary>Introduction to optimizations</summary>
 
 **Introduction to optimizations**
 **Combinational Logic Optimisation**
@@ -599,7 +606,7 @@ After Flatten
 
 ![ex-5 af](https://github.com/DSatle/IIITB_Asic/assets/140998466/d40b7a04-5234-4466-84c4-d50c4ace62c8)
 
-**Example -6
+**Example -6**
 ```
 	module sub_module1(input a , input b , output y);
 	 assign y = a & b;
@@ -677,6 +684,12 @@ Example-5
 
 ![dff ex-5 nl](https://github.com/DSatle/IIITB_Asic/assets/140998466/555c151e-cbc3-42ff-a724-ec480df10c26)
 
+</details>
+
+
+<details>
+ <Sequential optimisation of unused output</summary>
+	
 **Sequential optimisation of unused output**
 **Counter**
 
@@ -693,7 +706,14 @@ Example-5
 
 ![counter2 cells](https://github.com/DSatle/IIITB_Asic/assets/140998466/61b640de-44c0-4cdd-823b-d460701ae7b9)
 
+</details>
+
 ## Day_4 GLS, blocking and non-blocking and Synthesis-Simulation mismatch
+</details>
+
+
+<details>
+ <GLS, Synthesis-Simulation mismatch and blocking,nonblocking statements</summary>
 
 **GLS, Synthesis-Simulation mismatch and blocking/nonblocking statements**
 
@@ -709,7 +729,14 @@ Below picture gives an insight of the procedure. Here while using iverilog, we a
 
 ![GLS model timing conditon](https://github.com/DSatle/IIITB_Asic/assets/140998466/d9315151-6525-44eb-97b8-8fc3500a47c9)
 
+</details>
+
+
+<details>
+ <Synthesis Simulation Mismatch</summary>
+	 
 **Synthesis Simulation Mismatch**
+
 
 There are three main reasons for Synthesis Simulation Mismatch:
 
@@ -729,8 +756,14 @@ To avoid the synthesis and simulation mismatch. It is very important to check th
 
 Blocking statements execute the statemetns in the order they are written inside the always block. Non-Blocking statements execute all the RHS and once always block is entered, the values are assigned to LHS. This will give mismatch as sometimes, improper use of blocking statements can create latches. Get to see at Example4
 
+</details>
 
+
+<details>
+ <Labs on GLS and Synthesis-Simulation Mismatch</summary>
+	 
 **Labs on GLS and Synthesis-Simulation Mismatch**
+
 
 **Example-1** 
 
@@ -818,6 +851,11 @@ endmodule
 **Netlist Simulation**
 
 ![netlist gm](https://github.com/DSatle/IIITB_Asic/assets/140998466/b05cb837-abf7-4204-863c-dceec8ab4484)
+</details>
+
+
+<details>
+ <Labs on synth-sim mismatch for blocking statement</summary>
 
 
 **Labs on synth-sim mismatch for blocking statement**
@@ -856,9 +894,15 @@ D4 ch3 I1
 
 ![mnmn](https://github.com/DSatle/IIITB_Asic/assets/140998466/b81d3524-416c-45f9-85cd-49fca4af29e2)
 
-
+</details>
 
 ## Day_5 If,case, for loop and for generate
+</details>
+
+
+<details>
+ < If & Case constructs </summary>
+	 
 **If & Case constructs**
 
 The construct if is mainly used to create priority logic. In a nested if else construct, the conditions are given priority from top to bottom. Only if the condition is satisfied, if statement is executed and the compiler comes out of the block. If condition fails, it checks for next condition and so on as shown below.
@@ -921,7 +965,11 @@ The below image shows the error occured due to partial assingment. Due to this h
 ```
 D5 ch1 I3
 ```
+</details>
 
+
+<details>
+ < Lab incomplete if case </summary>
 
 **Lab incomplete if case**
 
@@ -965,6 +1013,13 @@ Below image shows latch present in the netlist.
 
 ![incomp if2 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/7661c8d5-f12b-4a07-80c5-42206b392281)
 
+
+</details>
+
+
+<details>
+ < Lab-Incomplete overlapping case </summary>
+	 
 **Lab-Incomplete overlapping case**
 
 **Example-1**
@@ -1061,6 +1116,12 @@ As we can see from the simulation wave form and difference in netlist waveform h
 
 FOR Generate can be used to instantiate any number of sub modules with in a top module. For example, if we need a 32 bit ripple carry adder, instead of instantiating 32 full adders, we can write a generate for loop and connect the full adders appropriately.
 
+</details>
+
+
+<details>
+ < Lab- For and For Generate </summary>
+	 
 **Lab- For and For Generate**
 **Example-1- Mux using generate**
 
@@ -1125,11 +1186,12 @@ Simulation
 
 Synthesis 
 
-Image add krna hai ask alwin for help
+I am facing some difficulty here sir. Will update it soon
 
 Netlist Simulation 
 
-Image add krna hai ask alwin for help.
+I am facing some difficulty here sir. Will update it soon
+
 
 
 
