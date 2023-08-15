@@ -389,7 +389,7 @@ D5 ch1 I3
 ```
 
 
-**Lab if case**
+**Lab incomplete if case**
 **Example-1**
 
 The below image shows the practical example where latch is formed due to incomplete if code used.
@@ -429,6 +429,14 @@ The below image shows that the synthesizer used a latch to implement the code at
 Below image shows latch present in the netlist.
 
 ![incomp if2 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/7661c8d5-f12b-4a07-80c5-42206b392281)
+
+**Lab-Incomplete overlapping case**
+Example-1 
+This is an example of incomplete case where other two combinations 10 and 11 were not included. This will infer a latch for the multiplexer and connect i2 and i3 with the output.
+
+Below is the code for the same.
+
+
 
 
 
