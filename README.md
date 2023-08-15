@@ -188,10 +188,6 @@ sudo make install
 ```
 
 # Day_1 Introduction to Verilog design and Synthesis
-</details>	
-	
- <details>
- <summary> Introduction to verilog design and Sysnthesis </summary>
 
 ## Terminologies 
 ### Simulator
@@ -210,10 +206,6 @@ Testbench is the setup to apply stimulus(test_vectors) to the design to check it
 ### Verilog based simulation flow
 ![Whole Process](https://github.com/DSatle/IIITB_Asic/assets/140998466/a8fd9846-658b-4893-b339-3daf3577d8d8)
 
-</details>	
-	
- <details>
- <summary> Github Clonning </summary>
 
 ## Github Cloning
 ### Steps to clone the github repository
