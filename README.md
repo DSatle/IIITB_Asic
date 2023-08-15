@@ -17,8 +17,12 @@ ASIC stands for Application Specific Integrated Chips, as name suggests these ch
 [Day 5](#day-5)
 
 # Day_0_Software_Installation
+
 Before moving towards the first step of learning the fundamental concepts ASIC design. This section deals with the installation of necessary tools required for the ASIC design.
 ## Software Installation
+
+<details>
+ <summary> Summary </summary>
 ### Knowing Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Selected features and typical applications:
 
@@ -43,6 +47,8 @@ $ make
 $ sudo make install
 ```
 ![Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/5aa618d6-63f5-433d-abd4-949d61e06621)
+
+</details>
 ### Knowing Icarus Verilog  
 ICARUS VERILOG
 Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format (EDIF). It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.Icarus Verilog is released under the GNU General Public License, Icarus Verilog is free software. Icarus is composed of a Verilog compiler (including a Verilog preprocessor) with support for plug-in backends, and a virtual machine that simulates the design.
@@ -274,7 +280,41 @@ Netlist verification is done to cross check whether the given netlist performs e
 
 **Hold Time**- The amount of time the data at the synchronous input must be stable after the active edge of the clock.
 
+![Setup and hold time](https://github.com/DSatle/IIITB_Asic/assets/140998466/da9e764a-aa58-4ee8-9b6b-872b7b609695)
+
 Note- Both setup and hold time for the flipflops is specified in the librbary.
+
+Invoking yosys
+```
+yosys
+```
+![Invoking Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/8f3ac985-640b-4ef4-ae2f-b67c848ec92b)
+
+Reading library
+
+read_liberty /home/full directory where RTL code is present.
+
+Reading Verilog code
+read_verilog filename.v
+
+
+Synthesize command 
+```
+synth -top filename
+```
+![Screenshot (19)](https://github.com/DSatle/IIITB_Asic/assets/140998466/9120c95a-c225-48da-83e4-27a8a8784576)
+
+Abc command
+```
+abc_liberty -lib /home/file directory where library is present 
+```
+Show command
+```
+show
+```
+
+Note- In the coming we will see the 
+
 
 ![Setup and hold time](https://github.com/DSatle/IIITB_Asic/assets/140998466/5bd55f3f-5841-4b3b-bc76-5a19c047d900)
 
@@ -284,6 +324,7 @@ The below image explains why we need slower gates. In the image for proper funct
 
 Hence we need fast cells to meet the required performance and we need cells that work slow to meet HOLD.
 
+**
 
 ## Day_2 Timing libs, hierarchial vs flat synthesis & efficient flop coding styles
 
