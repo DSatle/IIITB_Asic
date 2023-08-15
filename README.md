@@ -326,10 +326,85 @@ Hence we need fast cells to meet the required performance and we need cells that
 **Labs on synth-sim mismatch for blocking statement**
 
 ## Day_5 If,case, for loop and for generate
-**If Case constructs**
+**If & Case constructs**
+
+The construct if is mainly used to create priority logic. In a nested if else construct, the conditions are given priority from top to bottom. Only if the condition is satisfied, if statement is executed and the compiler comes out of the block. If condition fails, it checks for next condition and so on as shown below.
+Syntx of If is shown below
+```
+if (<condition 1>)
+begin
+-----------
+-----------
+end
+else if (<condition 2>)
+begin
+-----------
+-----------
+end
+else if (<condition 3>)
+.
+.
+.
+```
+
+**Dangers due to If**
+If use a bad coding style i.e, using incomplete if else constructs will infer a latch. We definetly don't require an unwanted latch in a combinational circuit. When an incomplete construct is used, if all the conditions are failed, the input is latched to the output and hence we don't get desired output unless we need a latch.
+The below image shows dangers with warning in red
+```
+D5 ch1 I1
+```
+**Case Construct**
+
+In case construct, the execution checks for all the case statements and whichever satisfies the statement, that particular statement is executed.If there is no match, the default statement is executed. But here unlike if construct, the execution doesn't stop once statement is satisfied, but it continues further.
+
+Below snippet show the syntax for case statement
+
+```
+case(statement)
+  case1: begin
+       --------
+	 --------
+	 end
+ case2: begin
+	     --------
+	 --------
+	 end
+ default:
+ endcase
+```
+Caveats in case occurs due to two primary reasons
+1. Incomplete case
+   The below image show the code and how a latch is formed in the case statement. Warning are shown in red colour.
+   ```
+   D5 ch1 I2
+   ```
+   Solution- Introducing a default in the code eliminates the problem of latch formation at hardware level.The snippet for which is shown below
+   
+   ```
+   case(statement)
+  case1: begin
+       --------
+	 --------
+	 end
+ case2: begin
+	     --------
+	 --------
+	 end
+ default:
+ endcase
+ ```
+2. Partial assignments
+The below image shows the error occured due to partial assingment. Due to this hardware generates some random error. Example of this is discussed in further section.
+```
+D5 ch1 I3
+```
+
+**Lab if case**
 
 
+   
 
+   
 
 
 
