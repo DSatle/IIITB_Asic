@@ -391,6 +391,7 @@ D5 ch1 I3
 
 
 **Lab incomplete if case**
+
 **Example-1**
 
 The below image shows the practical example where latch is formed due to incomplete if code used.
@@ -432,12 +433,106 @@ Below image shows latch present in the netlist.
 ![incomp if2 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/7661c8d5-f12b-4a07-80c5-42206b392281)
 
 **Lab-Incomplete overlapping case**
-Example-1 
+
+**Example-1**
+
 This is an example of incomplete case where other two combinations 10 and 11 were not included. This will infer a latch for the multiplexer and connect i2 and i3 with the output.
 
 Below is the code for the same.
 
 ![incomp cas1 code](https://github.com/DSatle/IIITB_Asic/assets/140998466/79a21569-4f9e-47f2-b667-81a97e6bfe6a)
+
+Below show the gtkwave where latch can be observed for (1,0) & (1,1) it's forming the latch. This can be observed between 2ns to 4ns.
+
+![incomp cas1 gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/d80e55c8-7bbc-410b-9678-36e9cfde58df)
+
+The cell stats show the presence of latch in hardware implementation.
+
+![cell stats cas1 incmo](https://github.com/DSatle/IIITB_Asic/assets/140998466/356ac6f4-fdf7-4b67-9bb3-a9d099a6ea63)
+
+Presence of netlist is obserevd in the netlist as well.
+
+![netlist incomp1](https://github.com/DSatle/IIITB_Asic/assets/140998466/4c2b6ab1-a7ae-4f46-937f-499827b08452)
+
+**Example-2**
+The below code is equivalent to two 2:1 mux with i0 and i2 as select lines with i1 and i3 as inputs respectively. Here as well, the output is connected back to input in the form of a latch with an enable input of OR of i0 and i2.
+
+Code snippet is given below
+
+![com case using default code](https://github.com/DSatle/IIITB_Asic/assets/140998466/dfbdcb1d-a748-4f1d-9106-e2dc289dfbb0)
+
+Below image of GTKWave show the proper working of case statement by using default statement
+
+![gtkwave comp gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/ea2a910f-8190-4f5c-8a5b-b7a608f596de)
+
+Cell stats shows elimination of latch from hardware 
+
+![cell stats comp case](https://github.com/DSatle/IIITB_Asic/assets/140998466/1a7a4a21-27e7-4235-9932-a1018b4902e7)
+
+Same is reflected in the netlist as well.
+
+![netlist comp cas](https://github.com/DSatle/IIITB_Asic/assets/140998466/e3fd9e22-c8f3-4e01-a230-02b8ca4ea70b)
+
+**Example-3**
+
+In the below example, y is present in all the case statements and it had particular outut for all cases. There no latch is inferred in case of y. When it comes to x, it is not assigned for the input 01, therefore a latch is inferred here.
+
+Code snippet is given below
+
+![code overlapping case](https://github.com/DSatle/IIITB_Asic/assets/140998466/f55388ef-fe12-44b7-83e6-9ca53480ee60)
+
+GTKWave show output for both x and y.
+
+![overlapping gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/8db55177-e8a0-4c28-a8fd-ce7666d1c7ca)
+
+Cell stats shows inclusion of latch because of x.
+
+![cell stats incomp 2 op](https://github.com/DSatle/IIITB_Asic/assets/140998466/0c6b804e-5baf-4665-b964-690374923264)
+
+Netlist shows infered latch at output x.
+
+![2 op case statement netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/8559648e-edde-40ec-93c0-6e1eb070ab67)
+
+**Example-4**
+
+![bad case](https://github.com/DSatle/IIITB_Asic/assets/140998466/c86e7b1a-dd25-4ddd-851e-58199934dcb6)
+
+GTKwave simulation
+
+![nn](https://github.com/DSatle/IIITB_Asic/assets/140998466/9049fecf-440b-404b-8511-8afc3fc65e6f)
+
+Cell stats
+
+![cell stats for overlapping](https://github.com/DSatle/IIITB_Asic/assets/140998466/b2f6dc08-8e6c-4ebc-aaa3-571789c87317)
+
+Netlist 
+
+![nn n](https://github.com/DSatle/IIITB_Asic/assets/140998466/99503380-c0a7-4839-b573-011dff51340f)
+
+**Netlist Simulation**
+
+As we can see from the simulation wave form and difference in netlist waveform here the invalid case is getting fixed by the tool which we should avoid to do so in the code
+
+![Capture](https://github.com/DSatle/IIITB_Asic/assets/140998466/d19c6a2b-92f1-4813-a1cc-c5c55894097d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
