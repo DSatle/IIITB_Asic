@@ -493,7 +493,7 @@ Netlist shows infered latch at output x.
 
 ![2 op case statement netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/8559648e-edde-40ec-93c0-6e1eb070ab67)
 
-**Example-4**
+**Example-4 Bad Mux Contruct**
 
 ![bad case](https://github.com/DSatle/IIITB_Asic/assets/140998466/c86e7b1a-dd25-4ddd-851e-58199934dcb6)
 
@@ -514,6 +514,101 @@ Netlist
 As we can see from the simulation wave form and difference in netlist waveform here the invalid case is getting fixed by the tool which we should avoid to do so in the code
 
 ![Capture](https://github.com/DSatle/IIITB_Asic/assets/140998466/d19c6a2b-92f1-4813-a1cc-c5c55894097d)
+
+**For loop & For Generate**
+
+* For loop is always used inside always block
+* For loop used for evaluating expressions
+* For loop is not used for instantiating Hard Ware multiple times
+
+* Generate For loop is always used outside always block,
+* Generate For loop is used when we need a code snippet multiple time i.e. used for instatiating Hard Ware.
+
+  For loop can be used to generate larger circuits like 256:1 multiplexer or 1-256 demultiplexer where the coding style of smaller mux is not feesible and can have human errors since we would need to include huge number of combinations.
+
+FOR Generate can be used to instantiate any number of sub modules with in a top module. For example, if we need a 32 bit ripple carry adder, instead of instantiating 32 full adders, we can write a generate for loop and connect the full adders appropriately.
+
+**Lab- For and For Generate**
+**Example-1- Mux using generate**
+
+Code Snippet 
+
+![Mux gene code](https://github.com/DSatle/IIITB_Asic/assets/140998466/dc38fb2a-7962-4845-8a05-4a8ac4792c87)
+
+GTKwave output
+
+![gtkwave mux gen code](https://github.com/DSatle/IIITB_Asic/assets/140998466/fad68d77-5d16-4182-91fb-44ab7b94e2ed)
+
+Netlist 
+
+![netlist mux gene](https://github.com/DSatle/IIITB_Asic/assets/140998466/2cc1d979-abac-456d-a0fb-4d6b657a83e0)
+
+Netlist simulation
+
+![netlist simulation mux generate](https://github.com/DSatle/IIITB_Asic/assets/140998466/e585e632-05f4-406a-ad53-c27715171d3a)
+
+**Example-2-Demux using case & generate**
+Code snippet
+
+![combined code demux](https://github.com/DSatle/IIITB_Asic/assets/140998466/bda3a20a-c964-4b9f-ae5f-1ab57746e33e)
+
+Demux Case RTL simulation
+
+![demux case gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/9be052a6-0ba6-4ecc-baa1-db0c4cbd5afb)
+
+Demux generate RTL simulation
+
+![demux generate gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/244518fe-a757-495c-bc3c-47fb226e52d6)
+
+Demux Case Netlist 
+
+![netlist demux case](https://github.com/DSatle/IIITB_Asic/assets/140998466/0517bac4-653b-4359-91e7-2c0b251579b6)
+
+Demux Generate Netlist
+
+![netlist mux gene](https://github.com/DSatle/IIITB_Asic/assets/140998466/46a19316-06c9-46e9-981a-f0a53f8b2dbe)
+
+Demux case Netlist Simulation
+
+![case demux netlist simulation](https://github.com/DSatle/IIITB_Asic/assets/140998466/cc6af981-f752-44d2-a9b8-799ffc7d0274)
+
+Demux generated Netlist simulation
+
+![netlist simulation mux generate](https://github.com/DSatle/IIITB_Asic/assets/140998466/8ef4ca46-965a-46c4-aa2d-074654cfd3e8)
+
+**Conclusion**- Whenever a big mux/demux is needed to be implemented "for" loop is very handy. Making larger mux using case statement is a tedious task, as the code length increases while this is not the case with for generate method.
+
+**Example-4 Ripple Carry Adder**
+
+In this Ripple carry adder example, unlike instantiating fulladder for 8 times, generate for loop is used to instantiate the fulladder for 7 times and only for first full adder, it is instantiated seperately. Using the same code, just by changing bus sizes and condition of for loop, we can design any required size of ripple carry adder.
+
+Code snippet
+
+![rca v](https://github.com/DSatle/IIITB_Asic/assets/140998466/8c8d74f5-16a3-4061-b478-5c0a351ce65e)
+
+Simulation
+
+![op gtkwave rca](https://github.com/DSatle/IIITB_Asic/assets/140998466/45b55412-0703-4298-beb0-32f72b6aefe0)
+
+Synthesis 
+
+Image add krna hai ask alwin for help
+
+Netlist Simulation 
+
+Image add krna hai ask alwin for help.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
