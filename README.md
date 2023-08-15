@@ -384,6 +384,7 @@ Caveats in case occurs due to two primary reasons
    
 2. Partial assignments
 The below image shows the error occured due to partial assingment. Due to this hardware generates some random error. Example of this is discussed in further section.
+
 ```
 D5 ch1 I3
 ```
@@ -435,6 +436,8 @@ Example-1
 This is an example of incomplete case where other two combinations 10 and 11 were not included. This will infer a latch for the multiplexer and connect i2 and i3 with the output.
 
 Below is the code for the same.
+
+![incomp cas1 code](https://github.com/DSatle/IIITB_Asic/assets/140998466/79a21569-4f9e-47f2-b667-81a97e6bfe6a)
 
 
 
