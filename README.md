@@ -384,7 +384,9 @@ Caveats in case occurs due to two primary reasons
    
 2. Partial assignments
 The below image shows the error occured due to partial assingment. Due to this hardware generates some random error. Example of this is discussed in further section.
+```
 D5 ch1 I3
+```
 
 
 **Lab if case**
