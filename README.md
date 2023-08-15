@@ -188,6 +188,11 @@ sudo make install
 ```
 
 # Day_1 Introduction to Verilog design and Synthesis
+</details>	
+	
+ <details>
+ <summary> Introduction to verilog design and Sysnthesis </summary>
+
 ## Terminologies 
 ### Simulator
 A simulator is a software tool that can be used to check the functionality of a circuit design before it is implemented in hardware. It does this by simulating the behavior of the design in software, using a Hardware Description Language (HDL) such as Verilog or VHDL. RTL design is checked for adherence to the specifications by simulating the design. Simultor looks for the chnages on the input signals. Output of the simulator is a vcd file i.e. value change dump format.
@@ -204,6 +209,11 @@ Testbench is the setup to apply stimulus(test_vectors) to the design to check it
 
 ### Verilog based simulation flow
 ![Whole Process](https://github.com/DSatle/IIITB_Asic/assets/140998466/a8fd9846-658b-4893-b339-3daf3577d8d8)
+
+</details>	
+	
+ <details>
+ <summary> Github Clonning </summary>
 
 ## Github Cloning
 ### Steps to clone the github repository
