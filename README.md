@@ -382,21 +382,6 @@ Caveats in case occurs due to two primary reasons
    ```
    Solution- Introducing a default in the code eliminates the problem of latch formation at hardware level.The snippet for which is shown below
    
-   ```
-   
-   case(statement)
-   
-  case1: begin
-       --------
-	 --------
-	 end
- case2: begin
-	     --------
-	 --------
-	 end
- default:
- endcase
- ```
 2. Partial assignments
 The below image shows the error occured due to partial assingment. Due to this hardware generates some random error. Example of this is discussed in further section.
 D5 ch1 I3
