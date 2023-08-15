@@ -321,9 +321,166 @@ Hence we need fast cells to meet the required performance and we need cells that
 
 **GLS, Synthesis-Simulation mismatch and blocking/nonblocking statements**
 
+**What is GLS- Gate Level Simulation?**
+
+GLS is generating the simulation output by running test bench with netlist file generated from synthesis as design under test. Netlist is logically same as RTL code, therefore, same test bench can be used for it.
+
+**Why GLS?**
+
+We perform this to verify logical correctness of the design after synthesizing it. Also ensuring the timing of the design is met.
+
+Below picture gives an insight of the procedure. Here while using iverilog, we also include gate level verilog models to generate GLS simulation.
+
+![GLS model timing conditon](https://github.com/DSatle/IIITB_Asic/assets/140998466/d9315151-6525-44eb-97b8-8fc3500a47c9)
+
+**Synthesis Simulation Mismatch**
+
+There are three main reasons for Synthesis Simulation Mismatch:
+
+* Missing sensitivity list in always block
+* Blocking vs Non-Blocking Assignments
+* Non standard Verilog coding
+  
+**Missing sensitivity list in always block:**
+
+If the consider - Example-2, we can see the only sel is mentioned in the sensitivity list. During the simulation, the waveforms will resemble a latched output but the simulation of netlist will not infer this as the synthesizer will only look at the statements with in the procedural block and not the sensitivity list.
+
+As the synthesizer doen't look for sensitivity list and it looks only for the statements in procedural block, it infers correct circuit and if we simulate the netlist code, there will be a synthesis simulation mismatch.
+
+To avoid the synthesis and simulation mismatch. It is very important to check the behaviour of the circuit first and then match it with the expected output seen in simulation and make sure there are no synthesis and simulation mismatches. This is why we use GLS.
+
+**Blocking vs Non-Blocking Assignments:**
+
+Blocking statements execute the statemetns in the order they are written inside the always block. Non-Blocking statements execute all the RHS and once always block is entered, the values are assigned to LHS. This will give mismatch as sometimes, improper use of blocking statements can create latches. Get to see at Example4
+
+
 **Labs on GLS and Synthesis-Simulation Mismatch**
 
+**Example-1** 
+
+There is no mismatch in this example as the netlist simulation and rtl simulation waveform are similar only
+```
+module ternary_operator_mux (input i0 , input i1 , input sel , output y);
+	assign y = sel?i1:i0;
+endmodule
+```
+**Simulation**
+
+![GTKWave terniary mux](https://github.com/DSatle/IIITB_Asic/assets/140998466/f94a62c3-abf2-49b1-b1ff-f99d7e837794)
+
+**Synthesis**
+
+![terniary mux netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/b1261108-e52d-463b-8391-7ba769056aa0)
+
+**Netlist Simulation**
+
+![terniary netlist gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/220675f5-4c0b-479f-80f0-61ba1fc92300)
+
+**Command for netlist verification**
+
+![netlist verify code](https://github.com/DSatle/IIITB_Asic/assets/140998466/8bf7e134-5c63-4a5d-866a-c4b840663da3)
+
+
+**Example-2**
+```
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+	always @ (sel)
+	begin
+		if(sel)
+			y <= i1;
+		else 
+			y <= i0;
+	end
+endmodule
+```
+**Simulation**
+
+![bad mux gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/c2b99647-766b-49ac-b323-13762a865927)
+
+**Synthesis**
+
+![bad mux netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/7f8ccaab-a5b9-4a50-a237-a4fd4bc2e655)
+
+**Netlist Simulation**
+
+![bbb](https://github.com/DSatle/IIITB_Asic/assets/140998466/e71ae49d-11ff-44d0-87ca-00888658a877)
+
+
+**Mismatch**
+Here the first image is showing mismatch because waveform was only changing only when select was changing where as in the second one it is corrected by the synthesizer.
+
+![bad mux gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/2275d668-fd1c-4b6a-af76-63687817598b)
+
+![bbb](https://github.com/DSatle/IIITB_Asic/assets/140998466/86a7de48-11d6-4a08-a165-581f4385fe2c)
+
+**Command to get netlist**
+
+![command to get bad bad with netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/5d4a2d1c-1d33-471c-86c8-709945ac0bd9)
+
+
+**Example-3**
+```
+module good_mux (input i0 , input i1 , input sel , output reg y);
+	always @ (*)
+	begin
+		if(sel)
+			y <= i1;
+		else 
+			y <= i0;
+	end
+endmodule
+
+```
+**Simulation**
+
+![good mux following](https://github.com/DSatle/IIITB_Asic/assets/140998466/035b0046-4c63-4cc8-87ca-83330a5fbc23)
+
+**Synthesis**
+
+![good mux following](https://github.com/DSatle/IIITB_Asic/assets/140998466/2b1be7cc-0e80-4714-9c8b-7c87891e5979)
+
+**Netlist Simulation**
+
+![netlist gm](https://github.com/DSatle/IIITB_Asic/assets/140998466/b05cb837-abf7-4204-863c-dceec8ab4484)
+
+
 **Labs on synth-sim mismatch for blocking statement**
+Here in the below example  the output is depending on the past value of x which is dependednt on a and b and it appears like a flop.
+```
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+	begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+
+```
+```
+D4 ch3 I1
+```
+**Simulation**
+
+![gtkwave blocking caveat](https://github.com/DSatle/IIITB_Asic/assets/140998466/81cad32e-e80c-49aa-b0f2-cf3cc4c30c5a)
+
+**Synthesis**
+
+![netlist blocking caveat](https://github.com/DSatle/IIITB_Asic/assets/140998466/3914bdad-98b1-4275-b65e-2e3eda727f06)
+
+**Cell Stats**
+
+![cell stats blocking caveat](https://github.com/DSatle/IIITB_Asic/assets/140998466/683b4f11-89b5-4883-8882-7bb630b04b2f)
+
+**Signal Info**
+
+![signal info blocking caveat](https://github.com/DSatle/IIITB_Asic/assets/140998466/afb87746-4205-452d-84a7-0286f33fb3d4)
+
+**Netlist Verification**
+
+![mnmn](https://github.com/DSatle/IIITB_Asic/assets/140998466/b81d3524-416c-45f9-85cd-49fca4af29e2)
+
+
 
 ## Day_5 If,case, for loop and for generate
 **If & Case constructs**
