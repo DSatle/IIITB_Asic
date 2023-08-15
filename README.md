@@ -21,7 +21,8 @@ ASIC stands for Application Specific Integrated Chips, as name suggests these ch
 Before moving towards the first step of learning the fundamental concepts ASIC design. This section deals with the installation of necessary tools required for the ASIC design.
 ## Software Installation
 
-
+<details>
+ <summary> Summary </summary>
 
 ### Knowing Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Selected features and typical applications:
@@ -47,6 +48,11 @@ $ make
 $ sudo make install
 ```
 ![Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/5aa618d6-63f5-433d-abd4-949d61e06621)
+
+</details>	
+	
+ <details>
+ <summary> Knowing Yosys </summary>
 
 
 ### Knowing Icarus Verilog  
