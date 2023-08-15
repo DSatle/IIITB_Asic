@@ -22,7 +22,7 @@ Before moving towards the first step of learning the fundamental concepts ASIC d
 ## Software Installation
 
 <details>
- <summary> Summary </summary>
+ <summary> Knowing Yosys </summary>
 
 ### Knowing Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Selected features and typical applications:
@@ -52,7 +52,7 @@ $ sudo make install
 </details>	
 	
  <details>
- <summary> Knowing Yosys </summary>
+ <summary> Knowing Icarus Verilog </summary>
 
 
 ### Knowing Icarus Verilog  
@@ -64,6 +64,11 @@ Icarus Verilog is an implementation of the Verilog hardware description language
 sudo apt-get install iverilog
 ```
 ![Verilog](https://github.com/DSatle/IIITB_Asic/assets/140998466/f89e230b-0cd2-4994-9d6c-18daabe59356)
+
+</details>	
+	
+ <details>
+ <summary> Knowing GTKWave </summary>
 ### Knowing GTKWave
 GTKWave is a fully featured GTK+ based wave viewer for Unix and Win32 which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.
 
