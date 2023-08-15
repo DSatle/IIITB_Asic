@@ -349,6 +349,7 @@ else if (<condition 3>)
 ```
 
 **Dangers due to If**
+
 If use a bad coding style i.e, using incomplete if else constructs will infer a latch. We definetly don't require an unwanted latch in a combinational circuit. When an incomplete construct is used, if all the conditions are failed, the input is latched to the output and hence we don't get desired output unless we need a latch.
 The below image shows dangers with warning in red
 ```
@@ -376,13 +377,14 @@ case(statement)
 Caveats in case occurs due to two primary reasons
 1. Incomplete case
    The below image show the code and how a latch is formed in the case statement. Warning are shown in red colour.
-   
+   ```
    D5 ch1 I2
-   
+   ```
    Solution- Introducing a default in the code eliminates the problem of latch formation at hardware level.The snippet for which is shown below
    
    ```
    case(statement)
+   
   case1: begin
        --------
 	 --------
