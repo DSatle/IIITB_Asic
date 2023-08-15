@@ -307,15 +307,162 @@ Hence we need fast cells to meet the required performance and we need cells that
 ## Day_3 Combinational and sequential optimizations
 
 **Introduction to optimizations**
+**Combinational Logic Optimisation**
+* Seqeezing the logic to get the most optimised design
+* Optimised Design is better interms of area & Power savings
+There are two ways to do this
+1. Constant Propagation
+2. Boolean Logic optimisation
+**Constant Propagation**
+Below constant 0 helped to reduce the circuit hence termed as constant propagation
+```
+D3 ch1 I1
+```
+**Boolean Logic optimisation**
+```
+D3 ch1 I2
+```
 
+Example-1 
+```
+![opt_check](https://github.com/DSatle/IIITB_Asic/assets/140998466/be9fc551-6139-44af-af6a-6e3f5e822e9c)
+```
+Example-2
+```
+![opt_check2](https://github.com/DSatle/IIITB_Asic/assets/140998466/b3e10411-6050-4edf-85bb-e086c9615435)
+```
+Example-3
+```
+![opt_check3](https://github.com/DSatle/IIITB_Asic/assets/140998466/e89e0305-e0f9-4da7-a114-dec823bd2cb5)
+```
+Example-4
+```
+![ex-4](https://github.com/DSatle/IIITB_Asic/assets/140998466/8a8f74d9-5ac9-4ba3-bc89-4d32563e06c9)
+```
+Example-5 
+Here there is multiple modules present so we will try to check whether those module are being used or not by using following commands:
 
+```
+yosys:read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys:read_verilog multiple_module_opt2.v
+yosys:synth -top multiple_module_opt2
+yosys:abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys:flatten
+yosys:opt_clean -purge
+yosys:show
+```
+```
+module sub_module(input a , input b , output y);
+	assign y = a & b;
+endmodule
 
+module multiple_module_opt2(input a , input b , input c , input d , output y);
+	wire n1,n2,n3;
+	sub_module U1 (.a(a) , .b(1'b0) , .y(n1));
+	sub_module U2 (.a(b), .b(c) , .y(n2));
+	sub_module U3 (.a(n2), .b(d) , .y(n3));
+	sub_module U4 (.a(n3), .b(n1) , .y(y));
+endmodule
+```
+Before Flatten
+![ex-5 bf](https://github.com/DSatle/IIITB_Asic/assets/140998466/0a78d50f-f911-48a9-b5db-2dc8486dea66)
+After Flatten
 
-**Combinational Logic optimizations**
+![ex-5 af](https://github.com/DSatle/IIITB_Asic/assets/140998466/d40b7a04-5234-4466-84c4-d50c4ace62c8)
+
+**Example -6
+```
+	module sub_module1(input a , input b , output y);
+	 assign y = a & b;
+	endmodule
+
+	module sub_module2(input a , input b , output y);
+	 assign y = a^b;
+	endmodule
+
+	module multiple_module_opt(input a , input b , input c , input d , output y);
+	wire n1,n2,n3;
+	sub_module1 U1 (.a(a) , .b(1'b1) , .y(n1));
+	sub_module2 U2 (.a(n1), .b(1'b0) , .y(n2));
+	sub_module2 U3 (.a(b), .b(d) , .y(n3));
+
+	assign y = c | (b & n1); 
+	endmodule
+```
+![ex-6 bf](https://github.com/DSatle/IIITB_Asic/assets/140998466/0391d03a-c647-412d-9ec3-6efdce739909)
+
+![ex-6 af](https://github.com/DSatle/IIITB_Asic/assets/140998466/68105603-d788-4e05-a43b-1104f3cec255)
 
 
 **Sequential Logic optimizations**
+1. Sequential logic optimisations(basic)
+2. Advanced
+   2.1 State Optimisation
+   2.2 Retiming
+   2.3 Sequential Logic Clonning(Floor plan aware synthesis)
+**State Optimisation**
+Below figure show the concept of Sequential Constant
+```
+D3 ch1 I3
+```
+**Clonning**- Done when doing a physical aware synthesis
 
+Below image shows concept of clonning 
+
+```
+D3 ch1 I4
+```
+
+When distance between A to B & A to C is very large & we have positive slack for A, we introduce more than one unit of A, this reduces the timing delay caused due to large distance.
+
+**Retiming**
+
+Below image shows the concept of retiming.
+Assumption clock to Q delay & setup time zero. Effectively we will be able to clock at 200Mhz. After retiming is done circuit can be clocked at 250Mhz, making it faster.
+```
+D3 ch1 I4
+```
+Example-1 
+
+![dff 1 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/0b0c170b-a0c8-4abe-bfde-390ecbfac855)
+
+![dff 1 no  of cells](https://github.com/DSatle/IIITB_Asic/assets/140998466/a5bb4995-7b33-44ee-a935-710e1391f466)
+
+Example-2 
+
+![dff 2 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/fdf8b316-fdc3-49e1-bce0-22b248c6b2d1)
+
+![dff 2 no  of cells](https://github.com/DSatle/IIITB_Asic/assets/140998466/e5d1f8f1-0cdf-40f2-ae6b-d3fcdff9bd96)
+
+Example-3
+
+![dff 3 no  of cells](https://github.com/DSatle/IIITB_Asic/assets/140998466/95f2a7a5-60f7-4aab-9355-aacd1694cee0)
+
+![dff3 no  of cells](https://github.com/DSatle/IIITB_Asic/assets/140998466/dbb16953-4924-4bb4-a76a-acaa35171a14)
+
+Example-4 
+
+![dff ex-4 nl](https://github.com/DSatle/IIITB_Asic/assets/140998466/b84a1691-a178-4960-ac67-9b588dfcec61)
+
+Example-5
+
+![dff ex-5 nl](https://github.com/DSatle/IIITB_Asic/assets/140998466/555c151e-cbc3-42ff-a724-ec480df10c26)
+
+**Sequential optimisation of unused output**
+**Counter**
+
+![netlist counter](https://github.com/DSatle/IIITB_Asic/assets/140998466/ceeb9b89-fc04-43d8-a54c-276e6a69f00a)
+
+![IO Signals counter](https://github.com/DSatle/IIITB_Asic/assets/140998466/d9c911f0-b19d-4d58-b8a4-c8cec1c92310)
+
+![counter cell counts](https://github.com/DSatle/IIITB_Asic/assets/140998466/86e2e474-6e2b-4171-8725-ec1dc2382ee7)
+
+**Updated Counter**
+![netlist counter2](https://github.com/DSatle/IIITB_Asic/assets/140998466/01452f60-b131-4b61-86d0-88c143c717b5)
+
+![counter 2 IO signals](https://github.com/DSatle/IIITB_Asic/assets/140998466/cf694cce-de69-446d-b03f-e2efea7ff59e)
+
+![counter2 cells](https://github.com/DSatle/IIITB_Asic/assets/140998466/61b640de-44c0-4cdd-823b-d460701ae7b9)
 
 ## Day_4 GLS, blocking and non-blocking and Synthesis-Simulation mismatch
 
