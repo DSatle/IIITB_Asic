@@ -383,6 +383,7 @@ Caveats in case occurs due to two primary reasons
    Solution- Introducing a default in the code eliminates the problem of latch formation at hardware level.The snippet for which is shown below
    
    ```
+   
    case(statement)
    
   case1: begin
