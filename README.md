@@ -563,21 +563,21 @@ Below constant 0 helped to reduce the circuit. Hence term as constant propagatio
 
 
 Example-1 
-```
+
 ![opt_check](https://github.com/DSatle/IIITB_Asic/assets/140998466/be9fc551-6139-44af-af6a-6e3f5e822e9c)
-```
+
 Example-2
-```
+
 ![opt_check2](https://github.com/DSatle/IIITB_Asic/assets/140998466/b3e10411-6050-4edf-85bb-e086c9615435)
-```
+
 Example-3
-```
+
 ![opt_check3](https://github.com/DSatle/IIITB_Asic/assets/140998466/e89e0305-e0f9-4da7-a114-dec823bd2cb5)
-```
+
 Example-4
-```
+
 ![ex-4](https://github.com/DSatle/IIITB_Asic/assets/140998466/8a8f74d9-5ac9-4ba3-bc89-4d32563e06c9)
-```
+
 Example-5 
 Here there is multiple modules present so we will try to check whether those module are being used or not by using following commands:
 
@@ -641,10 +641,10 @@ After Flatten
    2.3 Sequential Logic Clonning(Floor plan aware synthesis)
 **State Optimisation**
 Below figure show the concept of Sequential Constant
-```
-D3 ch1 I3
-```
+
 **Clonning**- Done when doing a physical aware synthesis
+
+![msg471781029-35205](https://github.com/DSatle/IIITB_Asic/assets/140998466/8f83ffb4-e65c-4542-a7b8-4cc8d9f801bc)
 
 Below image shows concept of clonning 
 
@@ -933,14 +933,14 @@ else if (<condition 3>)
 
 If use a bad coding style i.e, using incomplete if else constructs will infer a latch. We definetly don't require an unwanted latch in a combinational circuit. When an incomplete construct is used, if all the conditions are failed, the input is latched to the output and hence we don't get desired output unless we need a latch.
 The below image shows dangers with warning in red
-```
-D5 ch1 I1
-```
+
 **Case Construct**
 
 In case construct, the execution checks for all the case statements and whichever satisfies the statement, that particular statement is executed.If there is no match, the default statement is executed. But here unlike if construct, the execution doesn't stop once statement is satisfied, but it continues further.
 
 Below snippet show the syntax for case statement
+
+![photo1692123599](https://github.com/DSatle/IIITB_Asic/assets/140998466/090e3fd9-dd83-4577-9f6a-7067d652da00)
 
 ```
 case(statement)
