@@ -22,11 +22,8 @@ Before moving towards the first step of learning the fundamental concepts ASIC d
 ## Software Installation
 
 
-<details open>
-<summary>
+
 ### Knowing Yosys
-	</summary>
-<br>
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Selected features and typical applications:
 
 Process almost any synthesizable Verilog-2005 design
@@ -35,8 +32,7 @@ Built-in formal methods for checking properties and equivalence
 Mapping to ASIC standard cell libraries (in Liberty File Format)
 Mapping to Xilinx 7-Series and Lattice iCE40 and ECP5 FPGAs
 Foundation and/or front-end for custom flows
-Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the Yosys C++ code base. Yosys also serves as backend for several tools that use formal methods to reason about designs, such as sby for SMT-solver-based formal property checking or mcy for evaluating the quality of testbenches with mutation coverage metrics. Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD license).
-</details>
+Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the Yosys C++ code base. Yosys also serves as backend for several tools that use formal methods to reason about designs, such as sby for SMT-solver-based formal property checking or mcy for evaluating the quality of testbenches with mutation coverage metrics. Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD license)
 
 **Steps to Install Yosys**
 ```
