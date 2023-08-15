@@ -1194,6 +1194,7 @@ I am facing some difficulty here sir. Will update it soon
 Netlist Simulation 
 
 I am facing some difficulty here sir. Will update it soon
+</details>
 
 **Word Of Thanks**
 I would like to thanks Mr. Kunal Ghosh(Founder & CEO Inscopix), for guiding me and providing me quality content to know about the chip design flow. He made me work hard unknowningly its because of his guidance I learned how the semiconductor industry works.
@@ -1203,9 +1204,10 @@ I would like to thanks Mr. Kunal Ghosh(Founder & CEO Inscopix), for guiding me a
 2. Alwin Shahju Colleague at IIIT Bangalore
 3. Emil Jayant Lal, Colleague at IIIT Bangalore
 4. Sushma-Ravindra, Colleague at IIIT Bangalore
-5. Nandita Rao, Faculty IIIT Bangalore
-6. Idconline.com
-7. Prof Indranail Sengupta, Dept of Computer Science IIT Kharagpur.
+5. Madhav Rao, Faculty IIIT Bangalore
+6. Nandita Rao, Faculty IIIT Bangalore
+7. Idconline.com
+8. Prof Indranail Sengupta, Dept of Computer Science IIT Kharagpur.
 
 
 
