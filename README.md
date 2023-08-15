@@ -530,7 +530,9 @@ Sync & Async flipflop code
 
 **Interesting Optimisation**
 
-Add image from phone here
+![io1 (2)](https://github.com/DSatle/IIITB_Asic/assets/140998466/99d2c885-22fa-4781-b431-0a1010402604)
+
+![io2 (2)](https://github.com/DSatle/IIITB_Asic/assets/140998466/b8a02857-faaf-4637-abec-29733a6a1f7e)
 
 </details>
 
@@ -550,14 +552,15 @@ There are two ways to do this
 1. Constant Propagation
 2. Boolean Logic optimisation
 **Constant Propagation**
-Below constant 0 helped to reduce the circuit hence termed as constant propagation
-```
-D3 ch1 I1
-```
+Below constant 0 helped to reduce the circuit. Hence term as constant propagation
+
+![up](https://github.com/DSatle/IIITB_Asic/assets/140998466/0db109f5-5dc1-43c6-a5ef-2be3c4e109ac)
+
+
+
 **Boolean Logic optimisation**
-```
-D3 ch1 I2
-```
+![photo1692122716](https://github.com/DSatle/IIITB_Asic/assets/140998466/ab4c7371-e43b-41a7-851e-8a6342eff093)
+
 
 Example-1 
 ```
@@ -645,9 +648,9 @@ D3 ch1 I3
 
 Below image shows concept of clonning 
 
-```
-D3 ch1 I4
-```
+![msg471781029-35201](https://github.com/DSatle/IIITB_Asic/assets/140998466/e8e50fed-3bd5-4615-913e-6a600d11b2ee)
+
+
 
 When distance between A to B & A to C is very large & we have positive slack for A, we introduce more than one unit of A, this reduces the timing delay caused due to large distance.
 
@@ -655,9 +658,9 @@ When distance between A to B & A to C is very large & we have positive slack for
 
 Below image shows the concept of retiming.
 Assumption clock to Q delay & setup time zero. Effectively we will be able to clock at 200Mhz. After retiming is done circuit can be clocked at 250Mhz, making it faster.
-```
-D3 ch1 I4
-```
+
+![msg471781029-35199](https://github.com/DSatle/IIITB_Asic/assets/140998466/e3349ca8-7f66-4cf1-94e9-8dd0ad05a88f)
+
 Example-1 
 
 ![dff 1 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/0b0c170b-a0c8-4abe-bfde-390ecbfac855)
@@ -871,9 +874,10 @@ end
 endmodule
 
 ```
-```
-D4 ch3 I1
-```
+
+![msg471781029-35202](https://github.com/DSatle/IIITB_Asic/assets/140998466/e58c3075-086c-4d6c-b770-da8279affa0b)
+
+
 **Simulation**
 
 ![gtkwave blocking caveat](https://github.com/DSatle/IIITB_Asic/assets/140998466/81cad32e-e80c-49aa-b0f2-cf3cc4c30c5a)
@@ -954,17 +958,16 @@ case(statement)
 Caveats in case occurs due to two primary reasons
 1. Incomplete case
    The below image show the code and how a latch is formed in the case statement. Warning are shown in red colour.
-   ```
-   D5 ch1 I2
-   ```
+   
+  ![msg471781029-35204](https://github.com/DSatle/IIITB_Asic/assets/140998466/773f0299-5697-41a6-941c-fd69285f7c71)
+
    Solution- Introducing a default in the code eliminates the problem of latch formation at hardware level.The snippet for which is shown below
    
 2. Partial assignments
 The below image shows the error occured due to partial assingment. Due to this hardware generates some random error. Example of this is discussed in further section.
 
-```
-D5 ch1 I3
-```
+![msg471781029-35202](https://github.com/DSatle/IIITB_Asic/assets/140998466/3536ef3d-5af0-4b12-9065-bd4edc837080)
+
 </details>
 
 
