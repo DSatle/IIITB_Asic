@@ -289,19 +289,123 @@ Hence we need fast cells to meet the required performance and we need cells that
 
 **Introduction to timing.libs**
 
+Library Name- Sky130
+
+tt- Stands for typical process
+
+025C- Temparature 
+
+1V80- Indicates the voltage
+
+Three important parameters
+
+Process- Variations due to fabrication, due to human error every time it cannot be exactly made same
+
+Voltage- Change in voltage results n change in behaviour of circuit.
+
+Temperature- Semiconductors are highly sensitive to temparature.
+
+Cells- Basic entity used to make a circuit like gates flipflops.
+
+Command for getting library
+
+![Command SS for getting library code](https://github.com/DSatle/IIITB_Asic/assets/140998466/b2779e85-b79f-4f25-a11f-2a356e741407)
+
+Library details
+
+![Lib img-1](https://github.com/DSatle/IIITB_Asic/assets/140998466/3dc45fe8-d031-4f7b-8461-fbf239921f2f)
+
+![Lib img 2](https://github.com/DSatle/IIITB_Asic/assets/140998466/ecbe1e1f-4d23-4736-9bcd-1aae0b197762)
 
 
+**Hierarchial vs Float synthesis**
+File showing difference between and gates
+
+![Screenshot (43)](https://github.com/DSatle/IIITB_Asic/assets/140998466/38507182-c6a5-4338-83ba-7e2c00f7f8dc)
+
+Behavioral code of AND gate
+
+![AND behavioral](https://github.com/DSatle/IIITB_Asic/assets/140998466/7f903ac5-ee3f-431e-99f3-cbe486f242ae)
+
+Searching two input gate in library
+
+![a211o search bar](https://github.com/DSatle/IIITB_Asic/assets/140998466/c07282e2-3ef7-4c7e-aa44-d615ad26da1b)
+
+Searching three input gate in library
 
 
+![a21110 search bar](https://github.com/DSatle/IIITB_Asic/assets/140998466/d50f8d5f-497f-4139-9297-7d68d33cdba1)
+
+Verilog Code for multiple module 
+
+![veri code mm](https://github.com/DSatle/IIITB_Asic/assets/140998466/655dcbd2-028a-4a12-ae10-ec56972b81c4)
+
+Multiple module command for synthesis and netlist generation
+
+![gedit multipl](https://github.com/DSatle/IIITB_Asic/assets/140998466/cb1fce1c-9ee1-4489-9222-f9ae5446a629)
+
+![Invoking Yosys (2)](https://github.com/DSatle/IIITB_Asic/assets/140998466/5c473bf2-0a39-41c1-8778-0371c6eb0d2b)
+
+![Syth](https://github.com/DSatle/IIITB_Asic/assets/140998466/59ba8959-6f8e-4cee-93e6-b257ce582fda)
 
 
-**Hierarchial vs Flaot synthesis**
+Multiple module hierarchy 
 
+![Multiple modules hier](https://github.com/DSatle/IIITB_Asic/assets/140998466/2930e3e1-f8d3-479d-892c-eb50b513e854)
 
+Multiple module netlist 
 
+![Multiple module net list](https://github.com/DSatle/IIITB_Asic/assets/140998466/0a8afab8-b4f2-4017-b86c-e65057f8c6ac)
 
+Flattned Library file
+
+![Flattened netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/9e824050-528e-41c7-b2c3-c1aafa7fb95a)
+
+Flattned netlist
+
+![Flattened netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/88611a0c-2e29-4bde-8129-9037a027a0e2)
+
+Submodule AND gate
+
+![Submodule AND gate](https://github.com/DSatle/IIITB_Asic/assets/140998466/f5bcc556-8ec3-466a-bf49-5699f3d45b3a)
 
 **Various Flop Coding Styles and optimization**
+Sync reset flipflop code
+
+![sync dff](https://github.com/DSatle/IIITB_Asic/assets/140998466/eb408ac2-028d-4c61-90a1-31957128f822)
+
+Simulation
+
+
+![sync dff](https://github.com/DSatle/IIITB_Asic/assets/140998466/265f6f50-bbd7-4541-a156-f5e4f71c08cd)
+
+Netlist 
+
+![sync reset dff](https://github.com/DSatle/IIITB_Asic/assets/140998466/e8a63d53-4750-4853-ab08-ec4ab83ee63f)
+
+
+Async reset flipflop code
+
+![async reset](https://github.com/DSatle/IIITB_Asic/assets/140998466/975382c0-e708-412e-8775-78ad5e11459f)
+
+
+
+Simulation
+
+![gtkwave sync dff](https://github.com/DSatle/IIITB_Asic/assets/140998466/9fe90191-8576-4c65-8d72-c8b5e8173db1)
+
+Netlist 
+
+![dff async set](https://github.com/DSatle/IIITB_Asic/assets/140998466/99c5b49f-0611-467b-a603-9b45171afa0a)
+
+
+Sync & Async flipflop code 
+
+![Sync   async dff](https://github.com/DSatle/IIITB_Asic/assets/140998466/835d1285-2ce8-402c-b632-64082baa1f07)
+
+**Interesting Optimisation**
+
+Add image from phone here
 
 
 ## Day_3 Combinational and sequential optimizations
