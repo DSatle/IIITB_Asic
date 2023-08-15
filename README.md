@@ -186,8 +186,17 @@ cmake ..
 make
 sudo make install
 ```
+</details>
 
 # Day_1 Introduction to Verilog design and Synthesis
+<details>
+ <summary> Summary </summary>
+
+ </details>
+
+
+<details>
+ <summary> Introduction </summary>
 
 ## Terminologies 
 ### Simulator
@@ -206,7 +215,12 @@ Testbench is the setup to apply stimulus(test_vectors) to the design to check it
 ### Verilog based simulation flow
 ![Whole Process](https://github.com/DSatle/IIITB_Asic/assets/140998466/a8fd9846-658b-4893-b339-3daf3577d8d8)
 
+</details>
 
+
+<details>
+ <summary> Steps to clone the repository </summary>
+	
 ## Github Cloning
 ### Steps to clone the github repository
 First I made a new directory VSD, follow commands were used
@@ -236,6 +250,12 @@ cd verilog_files
 ![verilog files](https://github.com/DSatle/IIITB_Asic/assets/140998466/529fb477-4d1f-4aa6-89bf-4495946f29d7)
 
 The verilog_model folder in \\wsl.localhost\Ubuntu\home\vsd\VLSI\sky130RTLDesignAndSynthesisWorkshop\my_lib. The verilog_files folder contains all the lab experiment verilog source files and corresponding testbench files needed to simulate the designs.
+
+</details>
+
+
+<details>
+ <summary>Demostration of the Icarus Verilog and GTKWave </summary>
 
 **Demostration of the Icarus Verilog and GTKWave**
 
@@ -276,6 +296,15 @@ gedit tb_good_mux.v
 The above code opens the verilog code for test bench of 2x1 MUX writen in behavioral pattern.
 
 ![MUX test bench](https://github.com/DSatle/IIITB_Asic/assets/140998466/3606496c-9185-41d2-86ad-cd2dd0666183)
+
+Demostration of the Icarus Verilog and GTKWave
+
+</details>
+
+
+<details>
+ <summary>Process of Synthesis i.e RTL(Verilog code to Netlist) </summary>
+
 
 **Process of Synthesis i.e RTL(Verilog code to Netlist)**
 
@@ -357,10 +386,15 @@ The below image explains why we need slower gates. In the image for proper funct
 
 Hence we need fast cells to meet the required performance and we need cells that work slow to meet HOLD.
 
-**
+</details>
 
 ## Day_2 Timing libs, hierarchial vs flat synthesis & efficient flop coding styles
+</details>
 
+
+<details>
+ <summary>Introduction to timing library </summary>
+	
 **Introduction to timing.libs**
 
 Library Name- Sky130
@@ -391,7 +425,12 @@ Library details
 
 ![Lib img 2](https://github.com/DSatle/IIITB_Asic/assets/140998466/ecbe1e1f-4d23-4736-9bcd-1aae0b197762)
 
+</details>
 
+
+<details>
+ <summary>Hierarchial vs Float synthesis </summary>
+	
 **Hierarchial vs Float synthesis**
 File showing difference between and gates
 
@@ -443,6 +482,12 @@ Submodule AND gate
 
 ![Submodule AND gate](https://github.com/DSatle/IIITB_Asic/assets/140998466/f5bcc556-8ec3-466a-bf49-5699f3d45b3a)
 
+</details>
+
+
+<details>
+ <summary>Various Flop Coding Styles and optimization</summary>
+
 **Various Flop Coding Styles and optimization**
 Sync reset flipflop code
 
@@ -476,6 +521,12 @@ Netlist
 Sync & Async flipflop code 
 
 ![Sync   async dff](https://github.com/DSatle/IIITB_Asic/assets/140998466/835d1285-2ce8-402c-b632-64082baa1f07)
+
+</details>
+
+
+<details>
+ <summary>Interesting Optimisation</summary>
 
 **Interesting Optimisation**
 
