@@ -345,6 +345,7 @@ else if (<condition 3>)
 .
 .
 .
+
 ```
 
 **Dangers due to If**
@@ -375,9 +376,9 @@ case(statement)
 Caveats in case occurs due to two primary reasons
 1. Incomplete case
    The below image show the code and how a latch is formed in the case statement. Warning are shown in red colour.
-   ```
+   
    D5 ch1 I2
-   ```
+   
    Solution- Introducing a default in the code eliminates the problem of latch formation at hardware level.The snippet for which is shown below
    
    ```
@@ -395,14 +396,54 @@ Caveats in case occurs due to two primary reasons
  ```
 2. Partial assignments
 The below image shows the error occured due to partial assingment. Due to this hardware generates some random error. Example of this is discussed in further section.
-```
 D5 ch1 I3
-```
+
 
 **Lab if case**
+**Example-1**
+
+The below image shows the practical example where latch is formed due to incomplete if code used.
+
+   ![incom if code](https://github.com/DSatle/IIITB_Asic/assets/140998466/269b8a30-08db-40d7-8d0b-c2df16ebbab4)
+
+The below image show the image of latch at hardware level. Whenever io is low y is latching at some value.
+
+![gtkwave incom if](https://github.com/DSatle/IIITB_Asic/assets/140998466/ff07651c-07b3-425c-9893-d609c613571f)
+
+The below image show the latch used by the synthesizer to implement the circuit.
+
+![cell stats incomp if](https://github.com/DSatle/IIITB_Asic/assets/140998466/2616ef12-9c4b-44d9-8296-fd5e7924c304)
+
+The image shows presence of latch in the netlist
 
 
-   
+
+![incomp if netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/b5114974-df72-483f-8d61-c02f61aa0d07)
+
+The above images shows what an incomplete if state does to the circuit at various levels
+
+**Example-2**
+
+The below code is equivalent to two 2:1 mux with i0 and i2 as select lines with i1 and i3 as inputs respectively. Here as well, the output is connected back to input in the form of a latch with an enable input of OR of i0 and i2.
+
+![incom if2 code](https://github.com/DSatle/IIITB_Asic/assets/140998466/84ae9b77-b4de-442e-b211-3b4e907d51c2)
+
+The below image shows when i1 and i2 are low the circuit will act as a latch.
+
+![incom if2 gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/2b52e3fc-fd0d-4481-accb-b0ecc3d07640)
+
+The below image shows that the synthesizer used a latch to implement the code at the hardware level.
+
+![cell stats incomp if2](https://github.com/DSatle/IIITB_Asic/assets/140998466/10217c89-4c34-49f3-9f3e-9e77f050aa4d)
+
+Below image shows latch present in the netlist.
+
+![incomp if2 netlist](https://github.com/DSatle/IIITB_Asic/assets/140998466/7661c8d5-f12b-4a07-80c5-42206b392281)
+
+
+
+
+
 
    
 
