@@ -1187,17 +1187,10 @@ Simulation
 
 ![op gtkwave rca](https://github.com/DSatle/IIITB_Asic/assets/140998466/45b55412-0703-4298-beb0-32f72b6aefe0)
 
-Synthesis 
-
-I am facing some difficulty here sir. Will update it soon
-
-Netlist Simulation 
-
-I am facing some difficulty here sir. Will update it soon
 </details>
 
 **Word Of Thanks**
-I would like to thanks Mr. Kunal Ghosh(Founder & CEO Inscopix), for guiding me and providing me quality content to know about the chip design flow. He made me work hard unknowningly its because of his guidance I learned how the semiconductor industry works.
+I would like to thanks Mr. Kunal Ghosh(Founder & CEO Inscopix), for guiding me and providing me quality content to know about the chip design flow.
 
 **References**
 1. Vsdiat.
