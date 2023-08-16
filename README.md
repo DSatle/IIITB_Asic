@@ -1200,6 +1200,7 @@ Simulation
 </details>
 
 **Word Of Thanks**
+
 I would like to thanks Mr. Kunal Ghosh(Founder & CEO Inscopix), for guiding me and providing me quality content to know about the chip design flow.
 
 **References**
