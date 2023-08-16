@@ -191,7 +191,7 @@ sudo make install
 # Day_1 Introduction to Verilog design and Synthesis
 <details>
  <summary> Summary </summary>
-
+Day1 deals with knowing software, that which tool is used for what purpose at which stage of the design flow. Here I learned the meaning of basic terminologies used during synthesis. 
  </details>
 
 
