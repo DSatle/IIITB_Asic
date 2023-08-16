@@ -691,7 +691,8 @@ Example-5
 
 
 <details>
- <Sequential optimisation of unused output</summary>
+	
+ <summary>Sequential optimisation of unused output</summary>
 	
 **Sequential optimisation of unused output**
 **Counter**
