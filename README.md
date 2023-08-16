@@ -353,12 +353,12 @@ yosys
 ![Invoking Yosys](https://github.com/DSatle/IIITB_Asic/assets/140998466/8f3ac985-640b-4ef4-ae2f-b67c848ec92b)
 
 Reading library
-
+```
 read_liberty /home/full directory where RTL code is present.
 
 Reading Verilog code
 read_verilog filename.v
-
+```
 
 Synthesize command 
 ```
@@ -419,7 +419,7 @@ Command for getting library
 
 ![Command SS for getting library code](https://github.com/DSatle/IIITB_Asic/assets/140998466/b2779e85-b79f-4f25-a11f-2a356e741407)
 
-Library details
+**Library details**
 
 ![Lib img-1](https://github.com/DSatle/IIITB_Asic/assets/140998466/3dc45fe8-d031-4f7b-8461-fbf239921f2f)
 
@@ -551,7 +551,9 @@ Sync & Async flipflop code
 There are two ways to do this
 1. Constant Propagation
 2. Boolean Logic optimisation
+   
 **Constant Propagation**
+
 Below constant 0 helped to reduce the circuit. Hence term as constant propagation
 
 ![up](https://github.com/DSatle/IIITB_Asic/assets/140998466/0db109f5-5dc1-43c6-a5ef-2be3c4e109ac)
@@ -559,6 +561,7 @@ Below constant 0 helped to reduce the circuit. Hence term as constant propagatio
 
 
 **Boolean Logic optimisation**
+
 ![photo1692122716](https://github.com/DSatle/IIITB_Asic/assets/140998466/ab4c7371-e43b-41a7-851e-8a6342eff093)
 
 
@@ -604,7 +607,9 @@ module multiple_module_opt2(input a , input b , input c , input d , output y);
 endmodule
 ```
 Before Flatten
+
 ![ex-5 bf](https://github.com/DSatle/IIITB_Asic/assets/140998466/0a78d50f-f911-48a9-b5db-2dc8486dea66)
+
 After Flatten
 
 ![ex-5 af](https://github.com/DSatle/IIITB_Asic/assets/140998466/d40b7a04-5234-4466-84c4-d50c4ace62c8)
@@ -822,6 +827,7 @@ endmodule
 
 
 **Mismatch**
+
 Here the first image is showing mismatch because waveform was only changing only when select was changing where as in the second one it is corrected by the synthesizer.
 
 ![bad mux gtkwave](https://github.com/DSatle/IIITB_Asic/assets/140998466/2275d668-fd1c-4b6a-af76-63687817598b)
@@ -865,6 +871,7 @@ endmodule
 
 
 **Labs on synth-sim mismatch for blocking statement**
+
 Here in the below example  the output is depending on the past value of x which is dependednt on a and b and it appears like a flop.
 ```
 module blocking_caveat (input a , input b , input  c, output reg d); 
@@ -1196,13 +1203,13 @@ Simulation
 I would like to thanks Mr. Kunal Ghosh(Founder & CEO Inscopix), for guiding me and providing me quality content to know about the chip design flow.
 
 **References**
-1. Vsdiat.
+1. https://www.vsdiat.com/
 2. Alwin Shahju Colleague at IIIT Bangalore
 3. Emil Jayant Lal, Colleague at IIIT Bangalore
 4. Sushma-Ravindra, Colleague at IIIT Bangalore
 5. Madhav Rao, Faculty IIIT Bangalore
 6. Nandita Rao, Faculty IIIT Bangalore
-7. Idconline.com
+7. https://www.idc-online.com/
 8. Prof Indranail Sengupta, Dept of Computer Science IIT Kharagpur.
 
 
