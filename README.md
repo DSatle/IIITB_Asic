@@ -717,7 +717,8 @@ Example-5
 
 
 <details>
- <GLS, Synthesis-Simulation mismatch and blocking,nonblocking statements</summary>
+	
+ <summary>GLS, Synthesis-Simulation mismatch and blocking,nonblocking statements</summary>
 
 **GLS, Synthesis-Simulation mismatch and blocking/nonblocking statements**
 
@@ -737,7 +738,8 @@ Below picture gives an insight of the procedure. Here while using iverilog, we a
 
 
 <details>
- <Synthesis Simulation Mismatch</summary>
+	
+ <summary>Synthesis Simulation Mismatch</summary>
 	 
 **Synthesis Simulation Mismatch**
 
@@ -764,7 +766,7 @@ Blocking statements execute the statemetns in the order they are written inside 
 
 
 <details>
- <Labs on GLS and Synthesis-Simulation Mismatch</summary>
+ <summary>Labs on GLS and Synthesis-Simulation Mismatch</summary>
 	 
 **Labs on GLS and Synthesis-Simulation Mismatch**
 
@@ -859,7 +861,7 @@ endmodule
 
 
 <details>
- <Labs on synth-sim mismatch for blocking statement</summary>
+ <summary>Labs on synth-sim mismatch for blocking statement</summary>
 
 
 **Labs on synth-sim mismatch for blocking statement**
@@ -906,7 +908,7 @@ endmodule
 
 
 <details>
- < If & Case constructs </summary>
+ <summary>If & Case constructs </summary>
 	 
 **If & Case constructs**
 
@@ -973,7 +975,7 @@ The below image shows the error occured due to partial assingment. Due to this h
 
 
 <details>
- < Lab incomplete if case </summary>
+<summary>Lab incomplete if case </summary>
 
 **Lab incomplete if case**
 
@@ -1022,7 +1024,7 @@ Below image shows latch present in the netlist.
 
 
 <details>
- < Lab-Incomplete overlapping case </summary>
+ <summary>Lab-Incomplete overlapping case </summary>
 	 
 **Lab-Incomplete overlapping case**
 
@@ -1124,7 +1126,7 @@ FOR Generate can be used to instantiate any number of sub modules with in a top 
 
 
 <details>
- < Lab- For and For Generate </summary>
+ <summary>Lab- For and For Generate </summary>
 	 
 **Lab- For and For Generate**
 **Example-1- Mux using generate**
