@@ -1201,12 +1201,12 @@ Simulation
 
 **Word Of Thanks**
 
-I would like to thanks **Mr. Kunal Ghosh(Founder & CEO Inscopix)**, for guiding me and providing me **quality content** to know about the **chip design flow**.
+I would like to thanks **Mr. Kunal Ghosh(Founder & CEO VLSI System Design)**, for guiding me and providing me **quality content** to know about the **chip design flow**.
 
 **References**
 1. https://www.vsdiat.com/
-2. Alwin Shahju Colleague at IIIT Bangalore
-3. Emil Jayant Lal, Colleague at IIIT Bangalore
+2. Alwin Shaju Colleague at IIIT Bangalore
+3. Emil Jayanth Lal, Colleague at IIIT Bangalore
 4. Sushma-Ravindra, Colleague at IIIT Bangalore
 5. Madhav Rao, Faculty IIIT Bangalore
 6. Nandita Rao, Faculty IIIT Bangalore
