@@ -1211,10 +1211,16 @@ Simulation
 
 ## Day-6 Introduction to RISC-V ISA and GNU compiler toolchain
 
-**Introduction to RISC-V basic keywords**
+**Introduction to RISC-V**
+RISC stands for Reduced Instruction Set computer. RISC has small number of instructions. RISC-V is an open source ISA(Instruction Set Architeture).
 
+Why does a computer needs a RISC or CISC ISA?
 
+Any computer program or software inorder to work on a computer hardware needs to communicate to the layout(chip present on system). Accomplishment of which requires a process to be followed. First the high level language program is converted to assembly level program(which follows a particular architecture RISC-V in this case). After which it's converted to machine level program for computer to understand.For communication between architeture to layout there is need for a interface, called HDL(Hardware Description Language).
 
+Below image show the whole process of program or application execution.
+
+![comb](https://github.com/DSatle/IIITB_Asic/assets/140998466/32554f3a-f2a8-43a5-8f53-a14d00c3b932)
 
 **Word Of Thanks**
 
