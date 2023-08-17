@@ -1211,6 +1211,10 @@ Simulation
 
 ## Day-6 Introduction to RISC-V ISA and GNU compiler toolchain
 
+<details>
+ <summary> Introduction to RISC-V
+ </summary>
+	
 **Introduction to RISC-V**
 
 RISC stands for Reduced Instruction Set computer. RISC has small number of instructions. RISC-V is an open source ISA(Instruction Set Architeture).
