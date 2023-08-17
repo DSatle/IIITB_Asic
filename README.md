@@ -1209,7 +1209,11 @@ Simulation
 
 ### Week-2
 
-## Day-6
+## Day-6 Introduction to RISC-V ISA and GNU compiler toolchain
+
+**Introduction to RISC-V basic keywords**
+
+
 
 
 **Word Of Thanks**
