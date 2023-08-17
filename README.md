@@ -22,6 +22,8 @@ The whole process of ASIC design is shown below in the image
 
 [Day 5](#day-5)
 
+### Week-1
+
 # Day_0_Software_Installation
 
 Before moving towards the first step of learning the fundamental concepts ASIC design. This section deals with the installation of necessary tools required for the ASIC design.
@@ -1204,6 +1206,11 @@ Simulation
 ![op gtkwave rca](https://github.com/DSatle/IIITB_Asic/assets/140998466/45b55412-0703-4298-beb0-32f72b6aefe0)
 
 </details>
+
+### Week-2
+
+## Day-6
+
 
 **Word Of Thanks**
 
