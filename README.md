@@ -1227,6 +1227,10 @@ Below image show the whole process of program or application execution.
 
 ![comb](https://github.com/DSatle/IIITB_Asic/assets/140998466/32554f3a-f2a8-43a5-8f53-a14d00c3b932)
 
+<details>
+ <summary> Applications to Hardware
+ </summary>
+
 **Applications to Hardware**
 
 Inorder to run any application on the computer system. Below process needs to be followed.
@@ -1236,6 +1240,9 @@ Inorder to run any application on the computer system. Below process needs to be
 The assembly language program is dependent on the processor and its architecture. Every architeture has its own assembly language program.
 Converting assembly language program to machine level program is done using a specific process, which is elaborated in the flowchart below.
 
+<details>
+ <summary> Detailed description of workshop
+ </summary>
 
 **Word Of Thanks**
 
